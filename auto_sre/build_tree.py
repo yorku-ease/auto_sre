@@ -10,7 +10,6 @@ def tree_from_path(path_to_project_root: Path, length_of_root: int = None):
     
 
     if not path_to_project_root.is_dir():
-        print(path_to_project_root)
         root = Node(path=relative_path, value=path_to_project_root.read_text(), children=list())
         return root
     else:
