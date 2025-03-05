@@ -1,7 +1,7 @@
+"""Represent a software package as described in the README using an LLM"""
 from __future__ import annotations # for recursive node type hint
 from .model import Model
 from dataclasses import dataclass
-
 
 
 @dataclass
@@ -62,7 +62,7 @@ a description of the functionality of the subfolder.
 def create_description(root: Node, llm: Model, depth: int = 0):
     if depth == 0:
         llm.set_system_prompt(PACKKAGE_DESCRIPTION_SYSTEM_PROMPT)
-        
+
     if not root.children:
         input = create_prompt(CREATE_SINGLE_FILE_DESC_PROMPT, file_name=root.path, file_content=root.value)
         return get_output(llm, input)
