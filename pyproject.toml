@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "auto-sre"
+version = "0.1.0"
+description = ""
+authors = ["Mackenzie van Zanden <macktvz@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+ollama = "^0.4.7"
+pygithub = "^2.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
